@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,300italic,400italic,700italic')
+
+html, body
+	font-family 'Open Sans', 'sans-serif'
+	margin 0
+	padding 0
+	
+h1, h2, h3, h4, h5, p, span, i, b, strong
+	margin 0
+	line-height 1.1em 
+a, a:active, a:focus
+	text-decoration none
+	
+object
+	display none
+	
+.header
+	height 100vh
+	width 100vw
+	background-color rgba(51, 51, 51, .4) 
+	&__inner
+		position relative
+		z-index -1
+		height 100%
+		width 100%  
+		background-image url('images/1.jpg')
+		background-position center
+		background-size cover
+		background-repeat no-repeat
+	&__content
+		display flex
+		flex-direction column
+		justify-content center
+		align-items center
+		position absolute
+		top 0
+		bottom 0
+		right 0
+		left 0
+		margin auto 
+		color #FFF
+		&__desc
+			&__hat, &__info, &__title
+				font-weight 300
+			&__hat
+				font-size 1.3rem 
+			&__title
+				font-size 2.6rem
+			&__info
+				font-size 1rem
+		&__social
+			margin-top 1rem 
+			&__links
+				&__link
+					opacity 1 
+					height 3rem
+					width 3rem
+					margin 0 .8rem 
+					display inline-block
+					text-indent 100vw
+					overflow hidden
+					box-sizing border-box
+					background-position center
+					background-size contain
+					background-repeat no-repeat
+					&.facebook
+						background-image url('icons/facebook.png')
+					&.twitter
+						background-image url('icons/twitter.png')
+					&.linkedin
+						background-image url('icons/linkedin.png')
+					&.github
+						background-image url('icons/github.png')
+						
+	@media (min-width: 1024px)
+		&__content
+			&__desc
+				&__hat
+					font-size 2rem 
+				&__title
+					font-size 4rem
+				&__info
+					font-size 1.6rem
+			&__social
+				margin-top 1.5rem 
+				&__link
+					&__link
+						height 5rem
+						width 5rem
+						margin 0 1.2rem
+
+.footer
+	position fixed
+	bottom 0
+	right 0
+	left 0
+	margin auto
+	padding .2rem .5rem
+	text-align center
+	&__copy, a
+		color #FFF
+		font-size .8rem
+		font-weight 100
+		a
+			font-weight 300
+
+@keyframes blink-caret
+	50%
+		border-color #fff
+		
+@keyframes pulse
+	50%
+		opacity 1 
+
+.typed-cursor
+	display none
+
+#headline
+	border-right .2rem solid transparent
+	animation: blink-caret .6s step-end infinite alternate
+	white-space nowrap
+	overflow hidden
+	display inline-block
+	padding-right .5rem
+
+@media (min-width: 1024px)	
+	#social
+		a
+			opacity .6 
+		a:hover
+			animation: pulse 2s step-end infinite alternate
+			animation-timing-function: ease-in-out
