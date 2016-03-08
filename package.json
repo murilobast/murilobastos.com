@@ -1,0 +1,32 @@
+{
+  "name": "personal",
+  "version": "0.0.1",
+  "description": "My personal protifolio",
+  "main": "app.js",
+  "scripts": {
+    "server": "http-server site",
+    "build:css": "stylus stylus/style.styl -o site/style.css",
+    "watch:css": "watch \"npm run build:css\" stylus",
+    "build:html": "jade jade -o site",
+    "watch:html": "watch \"npm run build:html\" jade",
+    "build": "npm run build:css && npm run build:html",
+    "build:watch": "parallelshell  \"npm run server\" \"npm run watch:css\" \"npm run watch:html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilobast/murilobastos.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murilobast/murilobastos.com/issues"
+  },
+  "homepage": "https://github.com/murilobast/murilobastos.com#readme",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "jade": "^1.11.0",
+    "parallelshell": "^2.0.0",
+    "stylus": "^0.54.0",
+    "watch": "^0.17.1"
+  }
+}
