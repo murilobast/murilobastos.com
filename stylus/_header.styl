@@ -1,30 +1,38 @@
-	.site__header
-		width 100%
-		height 100vh  
-		position relative
-		z-index 0
-		&__bg, &__mask
-			height 100vh
-			position absolute
-			top 0
-			left 0
-			right 0
-		&__bg
-			background-image url('/img/bg.jpg')
-			background-size cover
-			background-position 50% 50%
-			z-index -2
-		&__mask
-			background-color rgba(16, 16, 15, .45)
-			z-index -1
-		&__container
-			height 100vh
-			container()
-			flexCentered()
-			&__menu
-				display none
-			// 	&__line
-			// &____title
-			&__content
-				&__subtitle
-					margin-top 40px
+.header
+	height 72px
+	position fixed
+	background-color rgba(0, 0, 0, .12)
+	top 0
+	left 0
+	right 0
+	z-index 5
+	transition all .3s ease-in-out
+	@extend .shadow-1
+	
+	&--fixed
+		height 56px
+		background-color #fff
+		@extend .shadow-2
+		
+		& ^[0]__title, & ^[0]__link
+			color #333
+	
+	.container
+		display flex
+		flex-direction row
+		align-items center
+		justify-content space-between
+		height 100%
+		
+	&__title
+		font-size 18px
+		font-weight 400
+		color #fff
+		transition all .3s ease-in-out
+		
+	&__link
+		font-size 14px
+		font-weight 100
+		color #fff
+		margin-left 12px
+		transition all .3s ease-in-out
