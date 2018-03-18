@@ -11,11 +11,8 @@
 	
 	&--fixed
 		height 56px
-		background-color #fff
+		background-color rgba(0, 0, 0, .95)
 		@extend .shadow-2
-		
-		& ^[0]__title, & ^[0]__link
-			color #333
 	
 	.container
 		display flex
@@ -32,7 +29,33 @@
 		
 	&__link
 		font-size 14px
-		font-weight 100
+		font-weight 300
 		color #fff
-		margin-left 12px
+		padding-left 24px
 		transition all .3s ease-in-out
+		height 36px
+		background-size 18px
+		background-repeat no-repeat
+		background-position center left
+		display inline-block
+		cursor pointer
+		line-height 36px
+		margin-right 18px
+		transition all .3s ease-in-out
+		
+		+hover()
+			&:hover
+				opacity .6
+		
+		&--twitter
+			background-image url('../assets/twitter.svg')
+			
+		&--telegram
+			background-image url('../assets/telegram.svg')
+			
+		+below(m)
+			width 36px
+			padding 0
+			margin 0
+			font-size 0
+			background-position center right

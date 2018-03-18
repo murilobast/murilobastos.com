@@ -1,11 +1,3 @@
-- 
-	var time = {
-		days: '01',
-		hours: '00',
-		minutes: '20',
-		seconds: '12'
-	}
-
 .countdown
 	.container
 		.countdown__header
@@ -13,14 +5,14 @@
 			p.countdown__title Cryptopia
 		.countdown__time
 			.countdown__unit
-				p.countdown__number #{time.days}
+				p.countdown__number(data-time="days") 00
 				span.countdown__label days
 			.countdown__unit
-				p.countdown__number #{time.hours}
+				p.countdown__number(data-time="hours") 00
 				span.countdown__label hours
 			.countdown__unit
-				p.countdown__number #{time.minutes}
+				p.countdown__number(data-time="minutes") 00
 				span.countdown__label minutes
 			.countdown__unit
-				p.countdown__number #{time.seconds}
+				p.countdown__number(data-time="seconds") 00
 				span.countdown__label seconds
