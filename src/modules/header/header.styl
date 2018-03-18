@@ -1,0 +1,38 @@
+.header
+	height 72px
+	position fixed
+	background-color rgba(0, 0, 0, .12)
+	top 0
+	left 0
+	right 0
+	z-index 5
+	transition all .3s ease-in-out
+	@extend .shadow-1
+	
+	&--fixed
+		height 56px
+		background-color #fff
+		@extend .shadow-2
+		
+		& ^[0]__title, & ^[0]__link
+			color #333
+	
+	.container
+		display flex
+		flex-direction row
+		align-items center
+		justify-content space-between
+		height 100%
+		
+	&__title
+		font-size 18px
+		font-weight 400
+		color #fff
+		transition all .3s ease-in-out
+		
+	&__link
+		font-size 14px
+		font-weight 100
+		color #fff
+		margin-left 12px
+		transition all .3s ease-in-out

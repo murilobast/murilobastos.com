@@ -1,0 +1,16 @@
+-
+	var topics = [
+		{ image: require('../../assets/pump.svg'), title: 'Fair PUMPs', text: 'BOT free pumps, made for humans.<br />We do not prepump the coins, we are a community, everyone can profit!' },
+		{ image: require('../../assets/erc20.svg'), title: 'PNHD ERC20 Token', text: 'Every new user is going to recieve a fair amount of our Pump And Hold Token for free!<br />You just need to subscripe to our airdrop! ;D' },
+		{ image: require('../../assets/repump.svg'), title: 'Repump', text: 'Remember the coin you bought and couldn\'t sell at peak? We got you!<br />With regular repump signals to ensure profit for everyone.' }
+	]
+
+section.section.section--topics
+	.container
+		ul.section__topics
+			each topic in topics
+				li.section__item
+					img.section__icon(src=topic.image)
+					h3.section__title #{topic.title}
+					h3.section__subtitle !{topic.text}
+

@@ -1,0 +1,28 @@
+.section
+	&--topics
+		background-color #fff
+		
+		& ^[0]__title, & ^[0]__subtitle
+			color $color-dark-text
+		
+		& ^[0]__subtitle
+			font-size 16px
+
+	&__topics
+		display flex
+		flex-direction row
+		align-items flex-start
+		justify-content space-between
+		
+		+below(l)
+			flex-direction column
+			align-items center
+			justify-content center
+		
+	&__item
+		width 29%
+		
+		+below(l)
+			width 100%
+			margin-bottom 60px
+	

@@ -1,0 +1,26 @@
+- 
+	var time = {
+		days: '01',
+		hours: '00',
+		minutes: '20',
+		seconds: '12'
+	}
+
+.countdown
+	.container
+		.countdown__header
+			p.countdown__title Next PUMP
+			p.countdown__title Cryptopia
+		.countdown__time
+			.countdown__unit
+				p.countdown__number #{time.days}
+				span.countdown__label days
+			.countdown__unit
+				p.countdown__number #{time.hours}
+				span.countdown__label hours
+			.countdown__unit
+				p.countdown__number #{time.minutes}
+				span.countdown__label minutes
+			.countdown__unit
+				p.countdown__number #{time.seconds}
+				span.countdown__label seconds

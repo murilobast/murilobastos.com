@@ -1,0 +1,75 @@
+.hero
+	position relative
+	height 640px
+	min-height 75vh
+	box-sizing border-box
+	background-size cover
+	background-position center
+	background-attachment fixed
+	padding-top 56px
+	padding-bottom 72px
+	background-image url('../assets/rocket-holder.jpg')
+	transition all 1s ease-in-out
+	
+	&--loaded
+		background-image url('../assets/rocket.jpg')
+	
+	+below(m)
+		height 100vh
+		background-position 35%
+
+	.container
+		height 100%
+
+	&:after
+		content ''
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		background-color rgba(0, 0, 0, .65)
+		
+	&__info
+		position relative
+		z-index 1
+		display flex
+		align-items flex-start
+		justify-content center
+		flex-direction column
+		height 100%
+		max-width 480px
+		color #fff
+		
+	&__title
+		font-size 36px
+		text-transform uppercase
+		font-weight 400
+		margin-bottom 24px
+		
+	&__subtitle
+		font-size 18px
+		font-weight 300
+		margin-bottom 60px
+		
+	&__button
+		padding 0 24px
+		border-radius 3px
+		border 2px solid $color-red
+		line-height 48px
+		font-size 16px
+		color #fff
+		background-color $color-red
+		transition all .3s ease-in-out
+		text-transform uppercase
+		box-sizing border-box
+		
+		&:hover
+			background-color transparent
+			color #fff
+			border-color #fff
+			
+		+below(m)
+			width 100%
+			text-align center
+			font-size 15px
