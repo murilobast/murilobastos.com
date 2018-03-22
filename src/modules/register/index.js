@@ -1,0 +1,1 @@
+import validateETHAddress from '../../helpers/validateETHAddress'
