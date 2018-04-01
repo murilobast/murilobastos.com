@@ -1,4 +1,4 @@
-import heroImage from '../../assets/rocket.jpg'
+import heroImage from '../../assets/hero-background.jpg'
 
 const asyncHeroBackground = new Image()
 const $hero = document.querySelector('.hero')

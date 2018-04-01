@@ -1,11 +1,23 @@
 html, body
-	font-family 'Roboto', sans-serif
 	font-family Open Sans,sans-serif
 	-webkit-font-smoothing antialiased
 	background-color $color-dark
 
 body
 	min-height 200vh
+	
+html:not(.fonts-loaded) *
+	font-family Helvetica, Calibri, Ubuntu, sans-serif !important
+	
+.footer
+	color #fff
+	text-align center
+	padding 30px 0
+
+	a
+		color #f3f3f3
+		font-weight 600
+		text-decoration underline
 
 // Shadows
 .shadow-1

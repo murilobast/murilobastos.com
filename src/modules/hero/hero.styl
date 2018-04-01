@@ -1,18 +1,18 @@
 .hero
 	position relative
-	height 640px
+	height 586px
 	min-height 75vh
 	box-sizing border-box
 	background-size cover
-	background-position center
+	background-position bottom center
 	background-attachment fixed
 	padding-top 56px
 	padding-bottom 72px
-	background-image url('../assets/rocket-holder.jpg')
-	transition all 1s ease-in-out
+	background-image url('../assets/hero-background-holder.jpg')
+	transition background-image .6s ease-in-out
 	
 	&--loaded
-		background-image url('../assets/rocket.jpg')
+		background-image url('../assets/hero-background.jpg')
 	
 	+below(m)
 		height 100vh
