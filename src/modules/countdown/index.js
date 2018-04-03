@@ -1,3 +1,4 @@
+const $countdown = document.querySelector('.countdown')
 const nextTime = new Date(Date.UTC(2018, 2, 19, 15, 0)).getTime()
 
 const addZero = value => value < 10 
@@ -35,3 +36,6 @@ const interval = setInterval(() => {
 	if (total <= 0)
 		clearInterval(interval)
 }, 300)
+
+if (nextTime - Date.now() >= 0)
+	$countdown.classList.remove('hidden')

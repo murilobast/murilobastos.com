@@ -9,12 +9,12 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: [/\.jpg$/, /\.png$/, /\.svg$/],
+				test: [/\.jpg$/, /\.png$/, /\.svg$/, /\.pdf$/],
 				use: {
 					loader: 'url-loader',
 					query: {
 						limit: 1000,
-						name: 'static/[name]-[hash].[ext]'
+						name: 'https://mooners.org/static/[name]-[hash].[ext]'
 					}
 				}
 			},
